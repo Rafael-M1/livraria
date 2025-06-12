@@ -99,7 +99,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-Para inicializar o servidor:
+Para inicializar/start o servidor:
 ```
 python manage.py runserver
 ```
