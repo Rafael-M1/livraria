@@ -4,6 +4,9 @@ Comandos usados:
 Criar ambiente virtual:
 - python -m venv venv
 
+Inicializar o ambiente virtual:
+- venv\Scripts\activate
+
 Para instalar o django e django ninja:
 - pip install django django-ninja
 
