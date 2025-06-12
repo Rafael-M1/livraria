@@ -23,13 +23,10 @@ jobs:
 
       - name: Instalar dependências
         run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Rodar migrações e testes
         run: |
-          source venv/bin/activate
           python manage.py migrate
           python manage.py test
