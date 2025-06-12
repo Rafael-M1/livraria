@@ -27,5 +27,6 @@ jobs:
 
       - name: Rodar migrações e testes
         run: |
-          python manage.py ../migrate
-          python manage.py ../test
+          ls
+          python manage.py migrate
+          python manage.py test
