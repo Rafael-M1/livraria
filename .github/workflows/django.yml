@@ -28,5 +28,6 @@ jobs:
       - name: Rodar migrações e testes
         run: |
           ls
+          cd livraria
           python manage.py migrate
           python manage.py test
