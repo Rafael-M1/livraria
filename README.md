@@ -168,3 +168,13 @@ Quando for instalar o projeto usar o comando a seguir para instalar todas depend
 ```
 pip install -r requirements.txt
 ```
+
+# Atividade 5 - adicionar dependência do gunicorn
+Instalar a dependência gunicorn e uvicorn e posteriormente atualizar o arquivo de requirements.txt:
+```
+pip install gunicorn uvicorn && pip freeze > requirements.txt
+```
+Para inicializar o servidor de aplicação com a aplicação:
+```
+uvicorn livraria.asgi:application --host 0.0.0.0 --port 8000
+```
