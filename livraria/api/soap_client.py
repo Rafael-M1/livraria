@@ -15,13 +15,28 @@ class SoapServiceClient:
         except Fault as fault:
             raise Exception(f"SOAP Fault: {fault.message}")
         except Exception as e:
-            raise Exception(f"Erro geral no SOAP: {str(e)}")
+            raise Exception(f"Erro no método Add: {str(e)}")
         
-    def divisao(self, int_a: int, int_b: int) -> int:
+    def divide(self, int_a: int, int_b: int) -> int:
         try:
-            response = self.client.service.Divide(intA=int_a, intB=int_b)
-            return response
+            return self.client.service.Divide(intA=int_a, intB=int_b)
         except Fault as fault:
             raise Exception(f"SOAP Fault: {fault.message}")
         except Exception as e:
-            raise Exception(f"Erro geral no SOAP: {str(e)}")
+            raise Exception(f"Erro no método Divide: {str(e)}")
+        
+    def subtrai(self, int_a: int, int_b: int) -> int:
+        try:
+            return self.client.service.Subtract(intA=int_a, intB=int_b)
+        except Fault as fault:
+            raise Exception(f"SOAP Fault: {fault.message}")
+        except Exception as e:
+            raise Exception(f"Erro no método Subtract: {str(e)}")
+
+    def multiplica(self, int_a: int, int_b: int) -> int:
+        try:
+            return self.client.service.Multiply(intA=int_a, intB=int_b)
+        except Fault as fault:
+            raise Exception(f"SOAP Fault: {fault.message}")
+        except Exception as e:
+            raise Exception(f"Erro no método Multiply: {str(e)}")
