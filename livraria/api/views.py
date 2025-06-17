@@ -2,6 +2,7 @@ from ninja import NinjaAPI
 from .schemas import LivroSchema, LivroIn
 from .models import Livro
 from .views_autores import router as autores_router
+from .views_calculadora import router as calculadora_router
 
 api = NinjaAPI()
 
@@ -16,3 +17,5 @@ def criar_livro(request, data: LivroIn):
 
 # As novas rotas de outro arquivo foram adicionadas
 api.add_router("/autores", autores_router)
+
+api.add_router("/calculadora", calculadora_router)
