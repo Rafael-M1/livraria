@@ -1,6 +1,4 @@
-from http.client import HTTPException
-import httpx
-from ninja import Router, Schema
+from ninja import Router
 from .soap_client import SoapServiceClient
 
 router = Router()
